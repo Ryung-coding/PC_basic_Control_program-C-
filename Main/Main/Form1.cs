@@ -25,42 +25,42 @@ namespace Main
 
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        int x_past, y_past;
+
+
+
+        private void pic_MouseMove(object sender, MouseEventArgs e)
         {
-
-        }
-
-        private void btn_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void timer1_Tick(object sender, EventArgs e)
-        {
-            int sec = Convert.ToInt32(msg.Text); //변수형태 고치기
-            sec--;
-
-            if (sec < 0)
+            if(e.Button == MouseButtons.Left)
             {
-                sec = 0;
-                timer1.Enabled = false; //타이머를 중지
-                MessageBox.Show("end"); //MODAL view라고 하는 것으로 이 창 이외는 다 먹통이 된다.
-                Application.Exit(); // 프로그램 종료
-            }
+                Graphics grp = pic.CreateGraphics();
+                Color col = Color.Black;
 
-            msg.Text = sec.ToString(); //Convert말고 이러한 방식으로도 가능하다
+                if (rad_red.Checked)
+                    col = Color.Red;
+                if (rad_blue.Checked)
+                    col = Color.Blue;
+                if (rad_black.Checked)
+                    col = Color.Black;
+
+                //grp.DrawEllipse(new Pen(col), e.X, e.Y, 1, 1);
+                grp.DrawLine(new Pen(col), x_past, y_past, e.X, e.Y);
+                x_past = e.X;
+                y_past = e.Y;
+            }
+            
 
         }
 
-        private void btn_MouseMove(object sender, MouseEventArgs e)
+        private void pic_MouseDown(object sender, MouseEventArgs e)
         {
-            btn.Left = rnd.Next(this.Width - btn.Width);//버튼의 좌측상단이 스크린의 왼쪽 벽과의 거리를 의미함 [px]
-            btn.Top = rnd.Next(this.Height - btn.Height);//버튼의 좌측상단이 스크린의 왼쪽 벽과의 거리를 의미함 [px]
+            x_past = e.X;
+            y_past = e.Y;   
+        }
+
+        private void pic_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

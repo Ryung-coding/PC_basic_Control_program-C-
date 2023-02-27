@@ -28,65 +28,71 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.btn = new System.Windows.Forms.Button();
-            this.msg = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.pic = new System.Windows.Forms.PictureBox();
+            this.rad_black = new System.Windows.Forms.RadioButton();
+            this.rad_red = new System.Windows.Forms.RadioButton();
+            this.rad_blue = new System.Windows.Forms.RadioButton();
+            ((System.ComponentModel.ISupportInitialize)(this.pic)).BeginInit();
             this.SuspendLayout();
             // 
-            // btn
+            // pic
             // 
-            this.btn.Location = new System.Drawing.Point(538, 57);
-            this.btn.Name = "btn";
-            this.btn.Size = new System.Drawing.Size(74, 55);
-            this.btn.TabIndex = 0;
-            this.btn.Text = "취소";
-            this.btn.UseVisualStyleBackColor = true;
-            this.btn.Click += new System.EventHandler(this.btn_Click);
-            this.btn.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btn_MouseMove);
+            this.pic.Location = new System.Drawing.Point(12, 12);
+            this.pic.Name = "pic";
+            this.pic.Size = new System.Drawing.Size(500, 500);
+            this.pic.TabIndex = 0;
+            this.pic.TabStop = false;
+            this.pic.Click += new System.EventHandler(this.pic_Click);
+            this.pic.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pic_MouseDown);
+            this.pic.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pic_MouseMove);
             // 
-            // msg
+            // rad_black
             // 
-            this.msg.AutoSize = true;
-            this.msg.Font = new System.Drawing.Font("굴림", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.msg.ForeColor = System.Drawing.Color.Red;
-            this.msg.Location = new System.Drawing.Point(28, 32);
-            this.msg.Name = "msg";
-            this.msg.Size = new System.Drawing.Size(126, 80);
-            this.msg.TabIndex = 1;
-            this.msg.Text = "10";
-            this.msg.Click += new System.EventHandler(this.label1_Click);
+            this.rad_black.AutoSize = true;
+            this.rad_black.Checked = true;
+            this.rad_black.Location = new System.Drawing.Point(546, 57);
+            this.rad_black.Name = "rad_black";
+            this.rad_black.Size = new System.Drawing.Size(62, 19);
+            this.rad_black.TabIndex = 1;
+            this.rad_black.TabStop = true;
+            this.rad_black.Text = "black";
+            this.rad_black.UseVisualStyleBackColor = true;
             // 
-            // label1
+            // rad_red
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("굴림", 20F, System.Drawing.FontStyle.Bold);
-            this.label1.ForeColor = System.Drawing.Color.Red;
-            this.label1.Location = new System.Drawing.Point(160, 73);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(319, 34);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "초 뒤에 포맷됩니다";
-            this.label1.Click += new System.EventHandler(this.label1_Click_1);
+            this.rad_red.AutoSize = true;
+            this.rad_red.Location = new System.Drawing.Point(546, 94);
+            this.rad_red.Name = "rad_red";
+            this.rad_red.Size = new System.Drawing.Size(48, 19);
+            this.rad_red.TabIndex = 2;
+            this.rad_red.TabStop = true;
+            this.rad_red.Text = "red";
+            this.rad_red.UseVisualStyleBackColor = true;
             // 
-            // timer1
+            // rad_blue
             // 
-            this.timer1.Enabled = true;
-            this.timer1.Interval = 1000;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            this.rad_blue.AutoSize = true;
+            this.rad_blue.Location = new System.Drawing.Point(546, 132);
+            this.rad_blue.Name = "rad_blue";
+            this.rad_blue.Size = new System.Drawing.Size(55, 19);
+            this.rad_blue.TabIndex = 3;
+            this.rad_blue.TabStop = true;
+            this.rad_blue.Text = "blue";
+            this.rad_blue.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(683, 451);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.msg);
-            this.Controls.Add(this.btn);
+            this.ClientSize = new System.Drawing.Size(651, 530);
+            this.Controls.Add(this.rad_blue);
+            this.Controls.Add(this.rad_red);
+            this.Controls.Add(this.rad_black);
+            this.Controls.Add(this.pic);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pic)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -94,10 +100,10 @@
 
         #endregion
 
-        private System.Windows.Forms.Button btn;
-        private System.Windows.Forms.Label msg;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.PictureBox pic;
+        private System.Windows.Forms.RadioButton rad_black;
+        private System.Windows.Forms.RadioButton rad_red;
+        private System.Windows.Forms.RadioButton rad_blue;
     }
 }
 

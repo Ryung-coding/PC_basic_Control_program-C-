@@ -24,10 +24,18 @@ namespace Main
 
         private void button1_Click(object sender, EventArgs e)
         {
-            int a = int.MaxValue; //int.이란 int라는 클래스의 함수를 실행한다는 뜻 이 코드는 최대값을 넣는 경우
-            a++; //하나의 값을 증가시킴
-            Console.WriteLine(a); // 그 경우, 가장 최소값으로 반전이 됨
-            
+            string a = "hello";
+            string b = " Ryung";
+            string c = a;
+            Console.WriteLine(c);
+            Console.WriteLine(c.Length);
+
+            bool t = false; 
+
+            if (t == false)
+            {
+                Console.WriteLine(c);
+            }
         }
     }
 }

@@ -7,14 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Diagnostics;
 
 namespace Main
 {
     public partial class Form1 : Form
     {
-        Random rnd = new Random();
 
-        
         public Form1()
         {
             InitializeComponent();
@@ -24,43 +23,25 @@ namespace Main
         {
 
         }
+        // double a = 15/2 -> 7이 나온다(15,2둘다 정수로 정수연산을 함)
+        // double a = 15.0/2.0 -> 7.5가 나온다
 
-        int x_past, y_past;
-
-
-
-        private void pic_MouseMove(object sender, MouseEventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-            if(e.Button == MouseButtons.Left)
-            {
-                Graphics grp = pic.CreateGraphics();
-                Color col = Color.Black;
+            int[] a = new int[10]; //a가 스텍이 생기고 힙에 연결됨
+            a[0] = 100; //힙에 100들어감
+            int[] b = a; // b가 스텍에 생기고, a가 가르킨 주소값을 동일하게 b도 가르키게 함
+            //그러므로 b의 원소와 a의 원소는 따로 다시 안넣어도 바뀜
+            b[0]++; //b0의 처음 원소를 바꿨기에 a[0]도 같이 바뀜
+            //a는 참조변수이기에 포인터와 다르다!
 
-                if (rad_red.Checked)
-                    col = Color.Red;
-                if (rad_blue.Checked)
-                    col = Color.Blue;
-                if (rad_black.Checked)
-                    col = Color.Black;
-
-                //grp.DrawEllipse(new Pen(col), e.X, e.Y, 1, 1);
-                grp.DrawLine(new Pen(col), x_past, y_past, e.X, e.Y);
-                x_past = e.X;
-                y_past = e.Y;
-            }
+            //만일 int[] b = new int[10] 이고
+            //b = a;
+            //b[0]++;
+            //라고 할때, b의 메모리를 굳이 잡았기에 비효율적이다.    
             
-
-        }
-
-        private void pic_MouseDown(object sender, MouseEventArgs e)
-        {
-            x_past = e.X;
-            y_past = e.Y;   
-        }
-
-        private void pic_Click(object sender, EventArgs e)
-        {
-
+            //자동 작다 빠르다 -> 스택(Stack) [가비지컬렉터가 알아서 메모리 처리]
+            //수동 크다 느리다 -> 힙(Heap)
         }
     }
 }

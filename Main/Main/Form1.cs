@@ -26,26 +26,13 @@ namespace Main
 
         private void button1_Click(object sender, EventArgs e)
         {
-            int y = Convert.ToInt32(text_year.Text);
-            int m = Convert.ToInt32(text_month.Text);
-            int d = Convert.ToInt32(text_day.Text);
+            int y  = Convert.ToInt32(tex_year.Text);
 
-          
-            int s = y + y / 4 - y / 100 + y / 400 + (int)(2.6 * m + 1.6) + d;
-            int r = s % 7;
+            bool year = y%4 == 0 && y%100 !=0 || y%400 == 0;
 
-            if (m == 1 || m ==2)
-            {
-                y--;
-                m++;
-            }
+            lab_out.Text = year ? "T":"F";
 
-            String[] st = new string[7] { "일", "월", "화", "수", "목", "금", "토" };
-            lab_out.Text = st[r];
+
         }
-
-        // double a = 15/2 -> 7이 나온다(15,2둘다 정수로 정수연산을 함)
-        // double a = 15.0/2.0 -> 7.5가 나온다
-
     }
 }

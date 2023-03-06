@@ -1,0 +1,11 @@
+C:\Users\USER\Desktop\c#_GUI\Bouncing_Ball_21100112\Bouncing_Ball_21100112\obj\Debug\Bouncing_Ball_21100112.csproj.AssemblyReference.cache
+C:\Users\USER\Desktop\c#_GUI\Bouncing_Ball_21100112\Bouncing_Ball_21100112\obj\Debug\Bouncing_Ball_21100112.csproj.SuggestedBindingRedirects.cache
+C:\Users\USER\Desktop\c#_GUI\Bouncing_Ball_21100112\Bouncing_Ball_21100112\obj\Debug\Bouncing_Ball_21100112.Form1.resources
+C:\Users\USER\Desktop\c#_GUI\Bouncing_Ball_21100112\Bouncing_Ball_21100112\obj\Debug\Bouncing_Ball_21100112.Properties.Resources.resources
+C:\Users\USER\Desktop\c#_GUI\Bouncing_Ball_21100112\Bouncing_Ball_21100112\obj\Debug\Bouncing_Ball_21100112.csproj.GenerateResource.cache
+C:\Users\USER\Desktop\c#_GUI\Bouncing_Ball_21100112\Bouncing_Ball_21100112\obj\Debug\Bouncing_Ball_21100112.csproj.CoreCompileInputs.cache
+C:\Users\USER\Desktop\c#_GUI\Bouncing_Ball_21100112\Bouncing_Ball_21100112\bin\Debug\Bouncing_Ball_21100112.exe.config
+C:\Users\USER\Desktop\c#_GUI\Bouncing_Ball_21100112\Bouncing_Ball_21100112\bin\Debug\Bouncing_Ball_21100112.exe
+C:\Users\USER\Desktop\c#_GUI\Bouncing_Ball_21100112\Bouncing_Ball_21100112\bin\Debug\Bouncing_Ball_21100112.pdb
+C:\Users\USER\Desktop\c#_GUI\Bouncing_Ball_21100112\Bouncing_Ball_21100112\obj\Debug\Bouncing_Ball_21100112.exe
+C:\Users\USER\Desktop\c#_GUI\Bouncing_Ball_21100112\Bouncing_Ball_21100112\obj\Debug\Bouncing_Ball_21100112.pdb
